@@ -1,0 +1,5 @@
+Student name: Lucas van Vianen
+Student number: 704985
+Student class: INF1B
+URL student GitHub website: https://Lucas-Light.github.io
+URL student GitHub repository: https://github.com/Lucas-Light/Lucas-Light.github.io

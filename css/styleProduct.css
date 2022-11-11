@@ -1,0 +1,311 @@
+body {
+	margin: 0;
+	padding: 0;
+
+	background: #242424;
+	color: #cdcdce;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+header > h1 {
+	text-transform: uppercase;
+	font-family: 'Notable';
+}
+
+h6 {
+	display: none;
+}
+
+/* For Mobile ------------------------------------------------------*/
+@media (max-width: 481px) {
+	.grid-container {
+		display: grid;
+		grid-template-areas: 
+		"header"
+		"article5"
+		"article3"
+		"article2"
+		"article1"
+		"aside"
+		"footer";
+	}
+	
+	#logo {
+		display: none;
+	}
+	
+	#menuToggle {
+	display: block;
+	position: absolute;
+	right: 0;
+	margin: 10px;
+
+	z-index: 1;
+	}
+
+	#menuToggle input {
+		display: block;
+		width: 40px;
+		height: 32px;
+		position: absolute;
+		top: -7px;
+		left: -5px;
+
+		cursor: pointer;
+
+		opacity: 0;
+		z-index: 2;
+	}
+
+	#menuToggle span {
+		display: block;
+		width: 33px;
+		height: 4px;
+		margin-bottom: 5px;
+		position: relative;
+
+		background: #cdcdcd;
+		border-radius: 3px;
+
+		z-index: 1;
+
+		transform-origin: 4px 0px;
+	}
+
+	#menu {
+		position: absolute;
+		margin: -40px 0 0 -50px;
+		padding: 10px;
+		padding-top: 50px;
+
+		background: #ededed;
+		list-style-type: none;
+
+		transform-origin: 0% 0%;
+		transform: translate(100%, 0);
+
+		transition: transform 0.2s;
+	}
+
+	#menuToggle input:checked ~ ul {
+		transform: none;
+	}
+
+	#menuToggle input:checked ~ span {
+		background-color: #232323;
+	}
+	
+	#article4 {
+		display: none;
+	}
+	
+	#article6 {
+		display: none;
+	}
+	
+	article > section
+	{
+		float: left;
+	}
+	
+	article > img
+	{
+		float: left;
+		width: 200px;
+	}
+}
+
+/* For Tablet ------------------------------------------------------*/
+@media (min-width: 481px) and (max-width: 1280px) {
+	.grid-container {
+		display: grid;
+		grid-template-areas: 
+		"header header"
+		"nav nav"
+		"article1 article2"
+		"article3 article2"
+		"article3 article5"
+		"article6 article6"
+		"aside aside"
+		"footer footer";
+	}
+	
+	#logo {
+		height: 75px;
+	}
+	
+	nav {
+		background-color: #f7ef00;
+	}
+	
+	#menutoggle span, input {
+		display: none;
+	}
+	
+	#menu {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+	}
+	
+	#menu > li {
+	padding: 10px;
+	float: left;
+	}
+	
+	#article4 {
+		display: none;
+	}
+	
+	article > section
+	{
+		float: left;
+	}
+	
+	article > img
+	{
+		float: left;
+		width: 200px;
+	}
+	
+	#aside3 {
+		display: none;
+	}
+}
+
+/* For PC ----------------------------------------------------------*/
+@media (min-width: 1280px) {
+	.grid-container {
+		display: grid;
+		grid-template-areas: 
+		"header header header"
+		"nav nav nav"
+		"article2 article1 article3"
+		"article5 article1 article3"
+		"article5 article1 article4"
+		"article5 article6 article6"
+		"aside aside aside"
+		"footer footer footer";
+	}
+	
+	#logo {
+		height: 100px;
+	}
+	
+	nav {
+		background-color: #f7ef00;
+	}
+	
+	#menutoggle span, input {
+		display: none;
+	}
+	
+	#menu {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+	}
+	
+	#menu > li {
+		padding: 10px;
+		float: left;
+	}
+	
+	#innovations {
+		display: none;
+	}
+	
+	article > section
+	{
+		float: left;
+	}
+	
+	article > a > img
+	{
+		float: right;
+		width: 200px;
+	}
+}
+
+header {
+	grid-area: header;
+}
+
+nav {
+	grid-area: nav;
+}
+
+#menu a {
+	text-decoration: none;
+	font-size: 22px;
+	color: #232323;
+}
+
+#menu a:hover {
+	color: #cdcdcd;
+}
+
+article {
+	padding: 10px;
+}
+
+#article1 {
+	background-color: #700000;
+	grid-area: article1;
+}
+
+#article2 {
+	background-color: #800000;
+	grid-area: article2;
+}
+
+#article3 {
+	background-color: #900000;
+	grid-area: article3;
+}
+
+#article4 {
+	background-color: #750000;
+	grid-area: article4;
+}
+
+#article5 {
+	background-color: #850000;
+	grid-area: article5;
+}
+
+#article6 {
+	background-color: #950000;
+	grid-area: article6;
+}
+
+aside {
+	background-color: #ad4200;
+	grid-area: aside;
+}
+
+aside > a > img{
+	width: 200px;
+	margin: 10px;
+}
+
+#cookie {
+	position: fixed;
+	z-index: 9999;
+	background-color: #FA0;
+	opacity: 50%;
+	right: 0;
+	bottom: 0;
+}
+
+#cookie p {
+	margin: 10px;
+	color: #FFF;
+}
+
+#mainFooter {
+	background-color: #000000;
+	text-align: center;
+	padding: 10px;
+	grid-area: footer;
+}
